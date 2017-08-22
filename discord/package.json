@@ -1,0 +1,28 @@
+{
+  "name": "prismriver",
+  "version": "1.0.0",
+  "description": "merlin, lyrica, and lunasa",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d dist",
+    "serve": "node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "discord.js": "^11.1.0",
+    "express": "^4.15.4",
+    "socket.io-client": "^2.0.3"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
