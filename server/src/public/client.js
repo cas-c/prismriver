@@ -6,15 +6,15 @@
     var socket = io();
     socket.on('typingStart', function(msg){
       kick.play();
-      $('#messages').append($('<li>').text(msg));
+      $('#messages').prepend($('<li>').text(msg));
     });
     socket.on('typingStop', function(msg){
       tick.play();
-      $('#messages').append($('<li>').text(msg));
+      $('#messages').prepend($('<li>').text(msg));
     });
     socket.on('message', function(msg){
       ty.play();
-      $('#messages').append($('<li>').text(msg));
+      $('#messages').prepend($('<li>').text(msg));
     });
     socket.on('pupdate', function(){
       var temp = [kick, tick, kick, kick, ty, kick, tick][Math.floor(Math.random() * 7)];
