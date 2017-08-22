@@ -13,21 +13,21 @@ bot.once('ready', () => {
 
 bot.on('typingStart', (channel, user) => {
 	console.log(`${user} typing in ${channel}`);
-	socket.emit('typingStart', `${user.username} typing in ${channel.name}`)
+	socket.emit('typingStart', `someone started typing`)
 });
 
 bot.on('typingStop', (channel, user) => {
 	console.log(`${user} stopped typing in ${channel}`);
-	socket.emit('typingStop', `${user.username} stopped typing in ${channel.name}`)
+	socket.emit('typingStop', `someone stopped typing`)
 });
 
 bot.on('message', (message) => {
 	console.log(`message in ${message.channel}`);
-	socket.emit('message', `message in ${message.channel}`);
+	socket.emit('message', `someone sent a message`);
 });
 
 bot.on('presenceUpdate', () => {
-	socket.emit('pupdate');
+	socket.emit('someones presence updated');
 });
 bot.login(config.token);
 
