@@ -17,8 +17,8 @@
       $('#messages').append($('<li>').text(msg));
     });
     socket.on('pupdate', function(){
-      var temp = [kick, tick, kick, kick, ty, kick, tick][Math.floor(Math.random() * 8)];
+      var temp = [kick, tick, kick, kick, ty, kick, tick][Math.floor(Math.random() * 7)];
       temp.play();
-      $('#messages').append($('<li>').text('presence update'));
+      $('#messages').prepend($('<li>').text('presence update'));
     });
   });
