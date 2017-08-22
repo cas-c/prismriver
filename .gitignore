@@ -1,3 +1,4 @@
 .gitignore
 */node_modules
-discord/config.json
+*/dist
+*/config.json
