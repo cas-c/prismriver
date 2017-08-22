@@ -27,7 +27,7 @@ bot.on('message', (message) => {
 });
 
 bot.on('presenceUpdate', () => {
-	socket.emit('someones presence updated');
+	socket.emit('pupdate', 'someones presence updated');
 });
 bot.login(config.token);
 
