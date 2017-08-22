@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node",
     "build": "babel src -d dist",
-    "postbuild": "cp src/public -r dist/public",
+    "postbuild": "cp src/public -r dist/",
     "serve": "node dist/index.js"
   },
   "keywords": [],
